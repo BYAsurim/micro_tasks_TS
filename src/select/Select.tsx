@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import s from './Selected.module.css'
 
 
 export const Select = () => {
@@ -16,39 +17,49 @@ export const Select = () => {
             name: 'Александр'
         }
     ];
-    const [state, setState] = useState(true)
-    const [title, setTitle] = useState('Users')
-    const clickHandler = () => {
-        setState(!state)
+    const [state, setState] = useState(false)
+    const [title, setTitle] = useState(users[0].name)
+
+    const clickHandler = () => setState(!state)
+    const titleClickHandler = (name: string) => {
+        setTitle(name)
+        setState(false)
     }
-    const styleInput = {
-        display: 'flex'
-    }
-    const styleImg = {
-        width: '15px',
-        height: '15px',
-        marginTop: '5px'
-    }
+
 
     return (
+
         <div>
-            <div onClick={clickHandler} style={styleInput}>
-                <div>{title}</div>
-                <img
-                    alt={''}
-                    style={styleImg}
-                    src='https://img1.freepng.ru/20180304/ije/kisspng-black-triangle-download-icon-black-triangle-5a9c96611ca0c5.3754695915202115531173.jpg'/>
+
+
+            <div className={s.styleImputAndImg}>
+                <div onClick={clickHandler} className={s.styleInput}>
+                    <div>{title}</div>
+                    <img
+                        alt={''}
+                        className={s.styleImg}
+                        src='https://img1.freepng.ru/20180304/ije/kisspng-black-triangle-download-icon-black-triangle-5a9c96611ca0c5.3754695915202115531173.jpg'/>
+                </div>
             </div>
 
-            {state && users.map(el => {
-                const titleClickHandler = () => {
-                    setTitle(el.name)
-                    setState(false)
-                }
-                return <div onClick={titleClickHandler} key={el.id}>{el.name}</div>
+            {state &&
+                <div className={s.items}>
+                    {users.map(el => {
+                        return <div
+                            onClick={() => {
+                                titleClickHandler(el.name)
+                            }} key={el.id}>{el.name}</div>
 
-            })}
+                    })}
+                </div>
+            }
 
+
+            <select>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">sasha</option>
+            </select>
         </div>
     );
 };

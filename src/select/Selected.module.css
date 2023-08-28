@@ -1,0 +1,24 @@
+.styleInput {
+    display: flex;
+    justify-content: space-between
+}
+
+.styleImg  {
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    }
+
+.styleImputAndImg {
+    border: solid 1px black ;
+    width: 100px;
+
+}
+ .items {
+    padding: 1px;
+    border: solid 1px black;
+    border-top: none;
+}
+ .item{
+     background-color: dodgerblue;
+ }
