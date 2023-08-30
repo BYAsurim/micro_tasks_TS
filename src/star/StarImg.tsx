@@ -4,11 +4,15 @@ import s from "./Star.module.css";
 type StarImgPropsType = {
     star: boolean
     setStar: () => void
+
 }
 
 export const StarImg = (props: StarImgPropsType) => {
+    const onClickHandler = ()=>{
+        props.setStar()
+    }
     return (
-        <div onClick={props.setStar}>
+        <div onClick={onClickHandler}>
             {
                 props.star  ?
                     <img className={s.img} alt='img'
