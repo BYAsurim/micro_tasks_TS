@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
 import {AcordionTitle} from "./AcordionTitle";
-import {AcordionBody} from "./AcordionBody";
+
+import {reduser} from "./reduserAcordion";
+
+
 
 export const Accordion = () => {
+
+
     const users = [
         {
             id: 1,
@@ -17,15 +22,29 @@ export const Accordion = () => {
             name: 'Александр'
         }
     ];
-    const [state, setState] = useState(true)
+    // const [state, setState] = useState(true)
+    const [state, dispatch] = useReducer(reduser, {OpenClose:true})
+    const [title, setTitle] = useState('Users')
     const clickHandler = () => {
-        setState(!state)
+        // setState(!state)
+        dispatch({type:'Open'})
     }
+
     return (
         <div>
-            <AcordionTitle title={'Users :'} clickHandler={clickHandler}/>
+            <AcordionTitle title={title} clickHandler={clickHandler}/>
 
-            {state && <AcordionBody users={users}/>}
+            {state.OpenClose && users.map(el => {
+                const titleClickHandler = ()=>{
+                    setTitle(el.name)
+                    // setState(false)
+                    dispatch({type:'Open'})
+
+                }
+              return  <li onClick={titleClickHandler} key={el.id}>{'--' + el.name}</li>
+
+            })}
+
         </div>
     );
 };
