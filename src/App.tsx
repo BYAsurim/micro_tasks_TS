@@ -4,6 +4,8 @@ import {Accordion} from "./acordion/Acordion";
 import {Star} from "./star/Star";
 import {OnOff} from "./onOff/OnOff";
 import {Select} from "./select/Select";
+import {Navigation} from "./navigation/Navigation";
+import {Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -11,10 +13,22 @@ function App() {
 
     return (
         <div className="App">
-            <Accordion/>
-            <Star star={star} setStar={setStar}/>
-            <OnOff/>
-            <Select/>
+            <div>
+            <Navigation/>
+            </div>
+            <div className="content">
+            <Routes>
+                <Route path={'/'} element={<div>выбери что нибудь </div>}/>
+                <Route path={'/select'} element={<Select/>}/>
+                <Route path={'/acordion'} element={<Accordion/>}/>
+                <Route path={'/star'} element={<Star star={star} setStar={setStar}/>}/>
+                <Route path={'/onOff'} element={ <OnOff/>}/>
+            </Routes>
+            </div>
+
+
+
+
         </div>
     );
 }
