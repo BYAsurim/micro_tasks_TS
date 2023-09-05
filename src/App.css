@@ -1,9 +1,16 @@
 .App {
   padding: 30px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App > div {
   margin-right: 50px;
 }
-
+.content{
+  margin-top: 150px;
+  justify-content: center;
+  align-items: center;
+}
