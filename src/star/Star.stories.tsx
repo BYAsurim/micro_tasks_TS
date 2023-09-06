@@ -1,15 +1,30 @@
-import { Star } from './Star';
+import type {Meta, StoryObj} from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 
-export default {
-    title: 'Raiting',
+import {Star} from './Star';
+
+const meta: Meta<typeof Star> = {
     component: Star,
+};
+export default meta;
+
+const onChangeHandler = action('onChange')
+type Story = StoryObj<typeof Star>;
+
+export const OneStarDemo: Story = {
+    args: {
+        star: 1,
+        setStar: () => {
+        }
+    },
 };
 
 // 1 звезда
 export const OneStar = () => (
     <Star
         star={1}
-        setStar={() => {}}
+        setStar={() => {
+        }}
     />
 )
 
@@ -17,7 +32,8 @@ export const OneStar = () => (
 export const TwoStars = () => (
     <Star
         star={2}
-        setStar={() => {}}
+        setStar={() => {
+        }}
     />
 )
 
@@ -25,7 +41,8 @@ export const TwoStars = () => (
 export const ThreeStars = () => (
     <Star
         star={3}
-        setStar={() => {}}
+        setStar={() => {
+        }}
     />
 )
 
@@ -33,7 +50,8 @@ export const ThreeStars = () => (
 export const FourStars = () => (
     <Star
         star={4}
-        setStar={() => {}}
+        setStar={() => {
+        }}
     />
 )
 
@@ -41,7 +59,8 @@ export const FourStars = () => (
 export const FiveStars = () => (
     <Star
         star={5}
-        setStar={() => {}}
+        setStar={() => {
+        }}
     />
 )
 
@@ -49,13 +68,14 @@ export const FiveStars = () => (
 export const Controlled = () => (
     <Star
         star={3}
-        setStar={value => console.log('New value:', value)}
+        setStar={onChangeHandler}
     />
 )
 
 // Без значения star
 export const Empty = () => (
     <Star star={0}
-        setStar={() => {}}
+          setStar={() => {
+          }}
     />
 )
