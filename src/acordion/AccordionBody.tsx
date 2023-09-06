@@ -7,7 +7,7 @@ type AcordionBodyPropsType = {
         name: string
     }[]
 }
-export const AcordionBody = (props: AcordionBodyPropsType) => {
+export const AccordionBody = (props: AcordionBodyPropsType) => {
     return (
         <div>
             <ul>

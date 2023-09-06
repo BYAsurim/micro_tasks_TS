@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Accordion} from "./acordion/Acordion";
+import {Accordion} from "./acordion/Accordion";
 import {Star} from "./star/Star";
 import {OnOff} from "./onOff/OnOff";
 import {Select} from "./select/Select";
@@ -20,7 +20,7 @@ function App() {
             <Routes>
                 <Route path={'/'} element={<div>выбери что нибудь </div>}/>
                 <Route path={'/select'} element={<Select/>}/>
-                <Route path={'/acordion'} element={<Accordion/>}/>
+                <Route path={'/acсordion'} element={<Accordion/>}/>
                 <Route path={'/star'} element={<Star star={star} setStar={setStar}/>}/>
                 <Route path={'/onOff'} element={ <OnOff/>}/>
             </Routes>

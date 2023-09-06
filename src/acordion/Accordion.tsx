@@ -1,5 +1,5 @@
 import React, {useReducer, useState} from 'react';
-import {AcordionTitle} from "./AcordionTitle";
+import {AccordionTitle} from "./AccordionTitle";
 
 import {reduser} from "./reduserAcordion";
 
@@ -32,7 +32,7 @@ export const Accordion = () => {
 
     return (
         <div>
-            <AcordionTitle title={title} clickHandler={clickHandler}/>
+            <AccordionTitle title={title} clickHandler={clickHandler}/>
 
             {state.OpenClose && users.map(el => {
                 const titleClickHandler = ()=>{

@@ -10,11 +10,11 @@ export const Navigation = () => {
             <NavLink to={'/'}>Home</NavLink>
             </div>
             <div>
-            <NavLink to={'/acordion'}>acordion</NavLink>
+            <NavLink to={'/acсordion'}>Acсordion</NavLink>
             </div>
-            <NavLink to={'/onOff'}>onOff</NavLink>
-            <NavLink to={'/select'}>select</NavLink>
-            <NavLink to={'/star'}>star</NavLink>
+            <NavLink to={'/onOff'}>OnOff</NavLink>
+            <NavLink to={'/select'}>Select</NavLink>
+            <NavLink to={'/star'}>Star</NavLink>
         </div>
     );
 };

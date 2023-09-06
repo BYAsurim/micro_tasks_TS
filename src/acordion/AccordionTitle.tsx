@@ -5,7 +5,7 @@ type AcordionTitlePropsType = {
     clickHandler: () => void
 }
 
-export const AcordionTitle = (props: AcordionTitlePropsType) => {
+export const AccordionTitle = (props: AcordionTitlePropsType) => {
     return (
         <div onClick={props.clickHandler}>
             <h3>{props.title}</h3>
