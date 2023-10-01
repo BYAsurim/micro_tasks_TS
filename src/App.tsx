@@ -6,6 +6,7 @@ import {OnOff} from "./onOff/OnOff";
 import {Select} from "./select/Select";
 import {Navigation} from "./navigation/Navigation";
 import {Route, Routes} from "react-router-dom";
+import {ClockStories} from "./stories/Clock.stories";
 
 
 function App() {
@@ -23,7 +24,10 @@ function App() {
                 <Route path={'/acсordion'} element={<Accordion/>}/>
                 <Route path={'/star'} element={<Star star={star} setStar={setStar}/>}/>
                 <Route path={'/onOff'} element={ <OnOff/>}/>
+
+
             </Routes>
+
             </div>
 
 
