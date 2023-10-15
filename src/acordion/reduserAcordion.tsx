@@ -4,7 +4,7 @@ export type actionType = {
 export type stateType = {
     OpenClose:boolean
 }
-export const reduser = (state:stateType,action:actionType) =>{
+export const reducer = (state:stateType, action:actionType) =>{
     // if(action.type === 'Open'){
     //     return !state
 debugger
@@ -14,5 +14,4 @@ debugger
         default :
             throw new Error('Nihu9I ne rabotaet! ! ! ')
     }
-    return state
 }
