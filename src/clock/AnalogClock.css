@@ -1,0 +1,39 @@
+.analog-clock {
+    display: inline-block;
+}
+
+.clock-face {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 40px;
+    background: #000;
+}
+
+.minute-hand {
+    width: 3px;
+    height: 60px;
+    background: #000;
+}
+
+.second-hand {
+    width: 2px;
+    height: 70px;
+    background: red;
+}

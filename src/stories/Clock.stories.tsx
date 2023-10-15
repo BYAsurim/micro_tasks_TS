@@ -9,6 +9,10 @@ export default {
 
 export const ClockStories = () => {
 
-    return <Clock/>
+    return <Clock  mode={'base'}/>
+};
+export const AnalogClockStories = () => {
+
+    return <Clock mode={'analog'}/>
 };
 
