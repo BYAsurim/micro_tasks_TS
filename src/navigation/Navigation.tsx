@@ -15,8 +15,10 @@ export const Navigation = () => {
             <NavLink to={'/onOff'}>OnOff</NavLink>
             <NavLink to={'/select'}>Select</NavLink>
             <NavLink to={'/star'}>Star</NavLink>
+            <NavLink to={'/testCount'}>testCount</NavLink>
         </div>
     );
 };
+
 
 
