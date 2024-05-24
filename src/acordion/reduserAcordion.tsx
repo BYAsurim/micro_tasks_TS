@@ -1,14 +1,13 @@
 export type actionType = {
-    type:string
+    type: string
 }
 export type stateType = {
-    OpenClose:boolean
+    OpenClose: boolean
 }
-export const reducer = (state:stateType, action:actionType) =>{
+export const reducer = (state: stateType, action: actionType) => {
     // if(action.type === 'Open'){
     //     return !state
-debugger
-    switch (action.type ){
+    switch (action.type) {
         case  'Open':
             return {...state, OpenClose: !state.OpenClose}
         default :

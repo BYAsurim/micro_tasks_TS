@@ -1,7 +1,7 @@
 import React, {useReducer, useState} from 'react';
 import {AccordionTitle} from "./AccordionTitle";
 
-import {reduser} from "./reduserAcordion";
+import {reducer} from "./reduserAcordion";
 
 
 
@@ -23,7 +23,7 @@ export const Accordion = () => {
         }
     ];
     // const [state, setState] = useState(true)
-    const [state, dispatch] = useReducer(reduser, {OpenClose:true})
+    const [state, dispatch] = useReducer(reducer, {OpenClose:true})
     const [title, setTitle] = useState('Users')
     const clickHandler = () => {
         // setState(!state)
